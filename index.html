@@ -193,17 +193,24 @@ function saveState(s){
 }
 
 const saved=loadState();
+// Restore schedule: revive Date objects from saved JSON strings
+let restoredSchedule=null;
+if(saved?.schedule){
+  try{
+    restoredSchedule=saved.schedule.map(d=>({...d,date:new Date(d.date),examSubj:d.examSubj?{...d.examSubj,exam:new Date(d.examSubj.exam)}:undefined}));
+  }catch(e){restoredSchedule=null;}
+}
 let state={
-  step:1,
+  step:saved?.step||1,
   startDate:saved?.startDate||today.toISOString().slice(0,10),
   classDL:saved?.classDL||CLASS_DEADLINES[2].date.toISOString().slice(0,10),
   spdC:saved?.spdC||3,
   hours:saved?.hours||Object.fromEntries(SUBJECTS.flatMap(s=>[[`${s.id}_c`,30],[`${s.id}_r1`,20],[`${s.id}_r2`,15]])),
   classOrder:saved?.classOrder||SUBJECTS.map(s=>s.id),
-  schedule:null,
+  schedule:restoredSchedule,
 };
 
-function persist(){saveState({startDate:state.startDate,classDL:state.classDL,spdC:state.spdC,hours:state.hours,classOrder:state.classOrder});}
+function persist(){saveState({startDate:state.startDate,classDL:state.classDL,spdC:state.spdC,hours:state.hours,classOrder:state.classOrder,step:state.step,schedule:state.schedule});}
 
 // ── SCHEDULER ─────────────────────────────────────────────────────────────────
 function buildSchedule(){
@@ -499,7 +506,7 @@ function renderStep3(){
 window.setHr=(k,v)=>{state.hours[k]=Math.max(0,Number(v)||0);persist();renderStrip();};
 window.setClassDL=(v)=>{state.classDL=v;persist();render();};
 window.goStep2=()=>{state.step=2;render();};
-window.generate=()=>{state.schedule=buildSchedule();state.step=3;render();};
+window.generate=()=>{state.schedule=buildSchedule();state.step=3;persist();render();};
 window.moveSeq=(id,dir)=>{
   const o=[...state.classOrder];
   const filtered=o.filter(x=>(state.hours[`${x}_c`]||0)>0);
