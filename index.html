@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<!-- saved from url=(0052)file:///C:/Users/harsh/Downloads/ca-planner-pwa.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>CA Inter Sept 2026 — AIR 1 Planner</title>
-<meta name="description" content="CA Inter September 2026 Study Planner by CA Shubham Singhal">
-<meta name="theme-color" content="#0D0F14">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="CA Planner">
-<link rel="manifest" id="manifest-placeholder" href="blob:null/d405ab42-5dbc-456d-b44d-8058e774f663">
+<meta name="description" content="CA Inter September 2026 Study Planner by CA Shubham Singhal"/>
+<meta name="theme-color" content="#0D0F14"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="CA Planner"/>
+<link rel="manifest" id="manifest-placeholder">
+<script>
+// Inline manifest injection — works on GitHub Pages
+window.addEventListener("load",()=>{
+  const m={name:"CA Inter Sept 2026 Planner",short_name:"CA Planner",description:"AIR 1 Study Planner by CA Shubham Singhal",start_url:"./",display:"standalone",background_color:"#0D0F14",theme_color:"#0D0F14",icons:[{src:"https://i.postimg.cc/bwbQqxmg/Artboard-8-copy-12-3x-100.jpg",sizes:"192x192",type:"image/jpeg"},{src:"https://i.postimg.cc/bwbQqxmg/Artboard-8-copy-12-3x-100.jpg",sizes:"512x512",type:"image/jpeg"}]};
+  const b=new Blob([JSON.stringify(m)],{type:"application/json"});
+  document.getElementById("manifest-placeholder").href=URL.createObjectURL(b);
+});
+</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:system-ui,-apple-system,sans-serif;background:#0D0F14;color:#F0F1F6;min-height:100vh}
@@ -86,7 +94,7 @@ td{padding:6px 12px;font-size:13px}
 <div id="app">
   <div class="hdr">
     <div class="hdr-left">
-      <img class="hdr-logo" src="./CA Inter Sept 2026 — AIR 1 Planner_files/Artboard-8-copy-12-3x-100.jpg" alt="Your CA Buddy">
+      <img class="hdr-logo" src="https://i.postimg.cc/bwbQqxmg/Artboard-8-copy-12-3x-100.jpg" alt="Your CA Buddy"/>
       <div>
         <div class="hdr-title">Your CA Buddy</div>
         <div class="hdr-sub">by CA Shubham Singhal</div>
@@ -98,190 +106,11 @@ td{padding:6px 12px;font-size:13px}
     </div>
   </div>
   <div class="inner">
-    <div class="phase-strip" id="phase-strip"><div class="phase-card" style="background:rgba(252,211,77,0.10);border:1px solid #FCD34D25"><div class="phase-label" style="color:#FCD34D">Classes</div><div class="phase-sub" style="color:#FCD34D">24 May → 14 Jul</div></div><div class="phase-card" style="background:rgba(167,139,250,0.10);border:1px solid #A78BFA25"><div class="phase-label" style="color:#A78BFA">1st Rev</div><div class="phase-sub" style="color:#A78BFA">15 Jul → Aug 1</div></div><div class="phase-card" style="background:rgba(52,211,153,0.10);border:1px solid #34D39925"><div class="phase-label" style="color:#34D399">2nd Rev</div><div class="phase-sub" style="color:#34D399">Aug 2 → Aug 26</div></div><div class="phase-card" style="background:rgba(248,113,113,0.10);border:1px solid #F8717125"><div class="phase-label" style="color:#F87171">Pre-exam</div><div class="phase-sub" style="color:#F87171">Aug 27–31</div></div><div class="phase-card" style="background:rgba(96,165,250,0.10);border:1px solid #60A5FA25"><div class="phase-label" style="color:#60A5FA">Exams</div><div class="phase-sub" style="color:#60A5FA">Sep 1 → Sep 12</div></div></div>
-    <div class="tabs" id="tabs"><button class="tab active">1. Hours &amp; Settings</button><button class="tab">2. Class Sequence</button><button class="tab" style="opacity: 0.35;">3. My Plan</button></div>
-    <div id="content">
-  <div class="settings-grid">
-    <div>
-      <div class="lbl">Start Date</div>
-      <input type="date" id="startDate" value="2026-05-24" style="width:100%">
-    </div>
-    <div>
-      <div class="lbl">Finish Classes By</div>
-      <div style="display:flex;gap:6px;flex-wrap:wrap">
-        <button onclick="setClassDL(&#39;2026-06-29&#39;)" style="padding:5px 12px;border-radius:99px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid rgba(255,255,255,0.07);background:transparent;color:#8B8FA8">30th June</button><button onclick="setClassDL(&#39;2026-07-06&#39;)" style="padding:5px 12px;border-radius:99px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid rgba(255,255,255,0.07);background:transparent;color:#8B8FA8">7th July</button><button onclick="setClassDL(&#39;2026-07-14&#39;)" style="padding:5px 12px;border-radius:99px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid #FCD34D;background:rgba(252,211,77,0.10);color:#FCD34D">15th July</button>
-      </div>
-    </div>
-    <div>
-      <div class="lbl">Subjects/Day (Classes)</div>
-      <select id="spdC" style="width:100%">
-        <option value="2">2 subjects/day</option>
-        <option value="3" selected="">3 subjects/day</option>
-      </select>
-    </div>
-  </div>
-  <div class="stat-grid">
-    <div class="stat-card" style="background:rgba(252,211,77,0.10);border:1px solid #FCD34D25"><div class="lbl" style="color:#FCD34D">Classes — daily hrs</div><div class="stat-v" style="color:#FCD34D">4.7 hrs/day</div><div class="stat-s" style="color:#FCD34D">240 hrs ÷ 51 days</div></div>
-    <div class="stat-card" style="background:rgba(167,139,250,0.10);border:1px solid #A78BFA25"><div class="lbl" style="color:#A78BFA">Rev 1 — daily hrs</div><div class="stat-v" style="color:#A78BFA">8.9 hrs/day</div><div class="stat-s" style="color:#A78BFA">160 hrs ÷ 18 days</div></div>
-    <div class="stat-card" style="background:rgba(52,211,153,0.10);border:1px solid #34D39925"><div class="lbl" style="color:#34D399">Rev 2 — daily hrs (25d)</div><div class="stat-v" style="color:#34D399">4.2 hrs/day</div><div class="stat-s" style="color:#34D399">105 hrs ÷ 25 days</div></div>
-  </div>
-  <div class="info-banner" style="background:rgba(52,211,153,0.10);border:1px solid #34D39925;color:#34D399"><strong>Rev 1 pairs (fixed):</strong> Accounts+Audit · Law+Costing · Direct Tax+Indirect Tax · FM+Strategic Mgmt</div>
-  <div class="info-banner" style="background:rgba(252,211,77,0.10);border:1px solid #FCD34D25;color:#FCD34D;margin-bottom:18px"><strong>Rev 2 (fixed Aug 2–26):</strong> FM+SM → Costing → Audit → Law (+AIMT) → DT+IDT → Aug 27–31: Adv. Accounts</div>
-  <div class="lbl" style="margin-bottom:8px">Group 1 subjects</div><div class="subj-grid"><div class="subj-card" style="border-top:2px solid #60A5FA">
-        <div class="subj-name">Adv. Accounts</div>
-        <div class="subj-exam">Exam: Tue, 1 Sept</div>
-        
-          <div class="hr-row">
-            <span class="hr-lbl">Classes</span>
-            <input type="number" min="0" class="hr-inp" value="30" onchange="setHr(&#39;aa_c&#39;,this.value)" oninput="setHr(&#39;aa_c&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">1st Rev</span>
-            <input type="number" min="0" class="hr-inp" value="20" onchange="setHr(&#39;aa_r1&#39;,this.value)" oninput="setHr(&#39;aa_r1&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">2nd Rev</span>
-            <input type="number" min="0" class="hr-inp" value="15" onchange="setHr(&#39;aa_r2&#39;,this.value)" oninput="setHr(&#39;aa_r2&#39;,this.value)">
-            <span class="hr-unit">hrs <span style="color:#F87171;font-size:10px">pre-exam</span></span>
-          </div>
-      </div><div class="subj-card" style="border-top:2px solid #60A5FA">
-        <div class="subj-name">Law</div>
-        <div class="subj-exam">Exam: Thu, 3 Sept</div>
-        
-          <div class="hr-row">
-            <span class="hr-lbl">Classes</span>
-            <input type="number" min="0" class="hr-inp" value="30" onchange="setHr(&#39;cl_c&#39;,this.value)" oninput="setHr(&#39;cl_c&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">1st Rev</span>
-            <input type="number" min="0" class="hr-inp" value="20" onchange="setHr(&#39;cl_r1&#39;,this.value)" oninput="setHr(&#39;cl_r1&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">2nd Rev</span>
-            <input type="number" min="0" class="hr-inp" value="15" onchange="setHr(&#39;cl_r2&#39;,this.value)" oninput="setHr(&#39;cl_r2&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-      </div><div class="subj-card" style="border-top:2px solid #60A5FA">
-        <div class="subj-name">Direct Tax</div>
-        <div class="subj-exam">Exam: Sun, 6 Sept</div>
-        
-          <div class="hr-row">
-            <span class="hr-lbl">Classes</span>
-            <input type="number" min="0" class="hr-inp" value="30" onchange="setHr(&#39;dt_c&#39;,this.value)" oninput="setHr(&#39;dt_c&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">1st Rev</span>
-            <input type="number" min="0" class="hr-inp" value="20" onchange="setHr(&#39;dt_r1&#39;,this.value)" oninput="setHr(&#39;dt_r1&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">2nd Rev</span>
-            <input type="number" min="0" class="hr-inp" value="15" onchange="setHr(&#39;dt_r2&#39;,this.value)" oninput="setHr(&#39;dt_r2&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-      </div><div class="subj-card" style="border-top:2px solid #60A5FA">
-        <div class="subj-name">Indirect Tax</div>
-        <div class="subj-exam">Exam: Sun, 6 Sept</div>
-        
-          <div class="hr-row">
-            <span class="hr-lbl">Classes</span>
-            <input type="number" min="0" class="hr-inp" value="30" onchange="setHr(&#39;it_c&#39;,this.value)" oninput="setHr(&#39;it_c&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">1st Rev</span>
-            <input type="number" min="0" class="hr-inp" value="20" onchange="setHr(&#39;it_r1&#39;,this.value)" oninput="setHr(&#39;it_r1&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">2nd Rev</span>
-            <input type="number" min="0" class="hr-inp" value="15" onchange="setHr(&#39;it_r2&#39;,this.value)" oninput="setHr(&#39;it_r2&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-      </div></div><div class="lbl" style="margin-bottom:8px">Group 2 subjects</div><div class="subj-grid"><div class="subj-card" style="border-top:2px solid #2DD4BF">
-        <div class="subj-name">Costing</div>
-        <div class="subj-exam">Exam: Tue, 8 Sept</div>
-        
-          <div class="hr-row">
-            <span class="hr-lbl">Classes</span>
-            <input type="number" min="0" class="hr-inp" value="30" onchange="setHr(&#39;cm_c&#39;,this.value)" oninput="setHr(&#39;cm_c&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">1st Rev</span>
-            <input type="number" min="0" class="hr-inp" value="20" onchange="setHr(&#39;cm_r1&#39;,this.value)" oninput="setHr(&#39;cm_r1&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">2nd Rev</span>
-            <input type="number" min="0" class="hr-inp" value="15" onchange="setHr(&#39;cm_r2&#39;,this.value)" oninput="setHr(&#39;cm_r2&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-      </div><div class="subj-card" style="border-top:2px solid #2DD4BF">
-        <div class="subj-name">Audit</div>
-        <div class="subj-exam">Exam: Thu, 10 Sept</div>
-        
-          <div class="hr-row">
-            <span class="hr-lbl">Classes</span>
-            <input type="number" min="0" class="hr-inp" value="30" onchange="setHr(&#39;au_c&#39;,this.value)" oninput="setHr(&#39;au_c&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">1st Rev</span>
-            <input type="number" min="0" class="hr-inp" value="20" onchange="setHr(&#39;au_r1&#39;,this.value)" oninput="setHr(&#39;au_r1&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">2nd Rev</span>
-            <input type="number" min="0" class="hr-inp" value="15" onchange="setHr(&#39;au_r2&#39;,this.value)" oninput="setHr(&#39;au_r2&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-      </div><div class="subj-card" style="border-top:2px solid #2DD4BF">
-        <div class="subj-name">Fin. Mgmt</div>
-        <div class="subj-exam">Exam: Sat, 12 Sept</div>
-        
-          <div class="hr-row">
-            <span class="hr-lbl">Classes</span>
-            <input type="number" min="0" class="hr-inp" value="30" onchange="setHr(&#39;fm_c&#39;,this.value)" oninput="setHr(&#39;fm_c&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">1st Rev</span>
-            <input type="number" min="0" class="hr-inp" value="20" onchange="setHr(&#39;fm_r1&#39;,this.value)" oninput="setHr(&#39;fm_r1&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">2nd Rev</span>
-            <input type="number" min="0" class="hr-inp" value="15" onchange="setHr(&#39;fm_r2&#39;,this.value)" oninput="setHr(&#39;fm_r2&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-      </div><div class="subj-card" style="border-top:2px solid #2DD4BF">
-        <div class="subj-name">Strategic Mgmt</div>
-        <div class="subj-exam">Exam: Sat, 12 Sept</div>
-        
-          <div class="hr-row">
-            <span class="hr-lbl">Classes</span>
-            <input type="number" min="0" class="hr-inp" value="30" onchange="setHr(&#39;sm_c&#39;,this.value)" oninput="setHr(&#39;sm_c&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">1st Rev</span>
-            <input type="number" min="0" class="hr-inp" value="20" onchange="setHr(&#39;sm_r1&#39;,this.value)" oninput="setHr(&#39;sm_r1&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-          <div class="hr-row">
-            <span class="hr-lbl">2nd Rev</span>
-            <input type="number" min="0" class="hr-inp" value="15" onchange="setHr(&#39;sm_r2&#39;,this.value)" oninput="setHr(&#39;sm_r2&#39;,this.value)">
-            <span class="hr-unit">hrs</span>
-          </div>
-      </div></div><button class="btn-primary" onclick="goStep2()">Next: Set Class Sequence →</button></div>
+    <div class="phase-strip" id="phase-strip"></div>
+    <div class="tabs" id="tabs"></div>
+    <div id="content"></div>
     <div class="footer">
-      <img class="footer-logo" src="./CA Inter Sept 2026 — AIR 1 Planner_files/Artboard-8-copy-12-3x-100.jpg" alt="Your CA Buddy">
+      <img class="footer-logo" src="https://i.postimg.cc/bwbQqxmg/Artboard-8-copy-12-3x-100.jpg" alt="Your CA Buddy"/>
       <span class="footer-txt">Plan smart. Revise harder. Aim for AIR 1. 🎯</span>
     </div>
   </div>
@@ -342,15 +171,25 @@ function isExam(d){return SUBJECTS.some(s=>sameDay(s.exam,d));}
 function sName(id){return SUBJECTS.find(s=>s.id===id)?.name||id;}
 function rnd(n){return Math.round(n*10)/10;}
 
-// Persist state in localStorage
+// Persist state — localStorage with cookie fallback
 function loadState(){
   try{
     const s=localStorage.getItem("ca_planner_state");
-    return s?JSON.parse(s):null;
-  }catch(e){return null;}
+    if(s)return JSON.parse(s);
+    // cookie fallback
+    const c=document.cookie.split(";").find(x=>x.trim().startsWith("ca_state="));
+    if(c)return JSON.parse(decodeURIComponent(c.split("=")[1]));
+  }catch(e){}
+  return null;
 }
 function saveState(s){
-  try{localStorage.setItem("ca_planner_state",JSON.stringify(s));}catch(e){}
+  try{
+    const str=JSON.stringify(s);
+    localStorage.setItem("ca_planner_state",str);
+    // also write cookie (expires 180 days) as fallback
+    const exp=new Date(Date.now()+180*864e5).toUTCString();
+    document.cookie=`ca_state=${encodeURIComponent(str)};expires=${exp};path=/;SameSite=Lax`;
+  }catch(e){}
 }
 
 const saved=loadState();
@@ -698,14 +537,16 @@ const mBlob=new Blob([JSON.stringify(manifest)],{type:"application/json"});
 document.getElementById("manifest-placeholder").href=URL.createObjectURL(mBlob);
 
 const SW_CODE=`
-const CACHE="ca-planner-v1";
-self.addEventListener("install",e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(["./"]).catch(()=>{}))));
-self.addEventListener("fetch",e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).then(res=>{const clone=res.clone();caches.open(CACHE).then(c=>c.put(e.request,clone));return res;}).catch(()=>caches.match("./")))));
+const CACHE="ca-planner-v2";
+const SHELL=["/"];
+self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL).catch(()=>{})));self.skipWaiting();});
+self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim();});
+self.addEventListener("fetch",e=>{if(e.request.method!=="GET")return;e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).then(res=>{if(res.ok){const clone=res.clone();caches.open(CACHE).then(c=>c.put(e.request,clone));}return res;}).catch(()=>caches.match("/")||new Response("Offline",{status:503}))));});
 `;
 if("serviceWorker" in navigator){
   const swBlob=new Blob([SW_CODE],{type:"application/javascript"});
   const swURL=URL.createObjectURL(swBlob);
-  navigator.serviceWorker.register(swURL).catch(()=>{});
+  navigator.serviceWorker.register(swURL).then(()=>console.log("SW registered")).catch(e=>console.warn("SW failed",e));
 }
 
 // Install prompt
@@ -720,6 +561,5 @@ window.installApp=async()=>{
 
 render();
 </script>
-
-
-</body></html>
+</body>
+</html>
